@@ -1,0 +1,12 @@
+.apply_variable{
+  background-color: var(--gray-surface-color);
+}
+
+.arrow_icon{
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  padding: 0.2rem;
+  background-color: var(--red-accent-color);
+  color: var(--gray-surface-color);
+}

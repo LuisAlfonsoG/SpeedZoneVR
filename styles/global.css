@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=Poppins&display=swap');
+
+:root{
+  --full-black: #000;
+  --gray-surface-color: #0A0A0A;
+  --gray-light-color: #606060;
+  --gray-on-surface-color: #BCBCBC;
+  --red-accent-color: #D71214;
+  --white-on-surface-color: #D9D9D9;
+  --dm-mono-font: 'DM Mono', monospace;
+  --poppins-font: 'Poppins', sans-serif;
+}
+
+html{
+  font-family: var(--dm-mono-font);
+}
+
+body{
+  background-color: #000;
+  color:  white;
+  max-width: 900px;
+  margin: 0 auto;
+}
