@@ -47,7 +47,19 @@ function HeaderCard() {
     <>
       <Navbar />
       <div className={styles.apply_variable}>
-        <h1>Carreras</h1>
+        <div class="container-sm rounded p-3 mt-5 mb-3 bg-danger text-center">
+          <h1>Carreras</h1>
+        </div>
+        <div class="container-sm input-group mb-3">
+          <input
+            type="text"
+            class="form-control rounded"
+            placeholder="Introduce el nombre..."
+          ></input>
+          <button class="btn bg-danger ms-3 rounded" type="submit">
+            <i class="bi bi-search text-light"></i>
+          </button>
+        </div>
         <SearchBar find={() => {}} />
         <Link href={"/realidadVirtual"}>
           <span className={styles.arrow_icon}>
