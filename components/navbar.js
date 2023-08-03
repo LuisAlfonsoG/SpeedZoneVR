@@ -3,8 +3,7 @@ import styles from "./navbar.module.css";
 export default function Navbar({}) {
   return (
     <nav
-      className={styles.apply_variable}
-      class="navbar nav-justified navbar-expand-sm navbar-dark border-bottom border-dark"
+      className={`${styles.apply_variable} navbar nav-justified navbar-expand-sm navbar-dark border-bottom border-dark`}
     >
       <div class="container">
         <ul class="navbar-nav">
@@ -21,7 +20,7 @@ export default function Navbar({}) {
             </a>
           </li>
         </ul>
-
+        <img src="#" className="img-fluid" alt="Logo"></img>
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link" href="#">

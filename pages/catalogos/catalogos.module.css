@@ -1,12 +1,31 @@
-.apply_variable{
+.apply_variable {
   background-color: var(--gray-surface-color);
 }
 
-.arrow_icon{
+.arrow_icon {
   display: inline-block;
   width: 1rem;
   height: 1rem;
   padding: 0.2rem;
   background-color: var(--red-accent-color);
   color: var(--gray-surface-color);
+}
+
+.bg_red {
+  background-color: var(--red-accent-color);
+}
+
+.bg_gray {
+  background-color: var(--gray-surface-color);
+}
+
+.text_red {
+  color: var(--red-accent-color);
+}
+
+.card_rb {
+  display: block;
+  border-style: solid;
+  border-width: 7px 7px 0px 0px;
+  border-color: var(--red-accent-color);
 }

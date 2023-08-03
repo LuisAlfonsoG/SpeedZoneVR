@@ -35,6 +35,88 @@ export default function Catalogo({ games }) {
         <HeaderCard />
       </header>
       <main className={styles.main}>
+        <div class="row row-cols-1 row-cols-sm-2 my-5 mx-3 g-4">
+          <div class="col">
+            <div
+              className={`${styles.bg_gray} text-light border-3 border-dark card p-2 h-100`}
+            >
+              <fieldset className={`${styles.card_rb} rounded-top`}>
+                <legend className={`${styles.text_red} float-none w-auto px-1`}>
+                  Videogame
+                </legend>
+                <img src={img_url} className="card-img-top px-3" alt="image" />
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    This is a longer card with supporting text below as a
+                    natural lead-in to additional content. This content is a
+                    little bit longer.
+                  </p>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              className={`${styles.bg_gray} text-light border-3 border-dark card p-2 h-100`}
+            >
+              <fieldset className={`${styles.card_rb} rounded-top`}>
+                <legend className={`${styles.text_red} float-none w-auto px-1`}>
+                  Videogame
+                </legend>
+                <img src={img_url} className="card-img-top px-3" alt="image" />
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    This is a longer card with supporting text below as a
+                    natural lead-in to additional content. This content is a
+                    little bit longer.
+                  </p>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              className={`${styles.bg_gray} text-light border-3 border-dark card p-2 h-100`}
+            >
+              <fieldset className={`${styles.card_rb} rounded-top`}>
+                <legend className={`${styles.text_red} float-none w-auto px-1`}>
+                  Videogame
+                </legend>
+                <img src={img_url} className="card-img-top px-3" alt="image" />
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    This is a longer card with supporting text below as a
+                    natural lead-in to additional content. This content is a
+                    little bit longer.
+                  </p>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+          <div class="col">
+            <div
+              className={`${styles.bg_gray} text-light border-3 border-dark card p-2 h-100`}
+            >
+              <fieldset className={`${styles.card_rb} rounded-top`}>
+                <legend className={`${styles.text_red} float-none w-auto px-1`}>
+                  Videogame
+                </legend>
+                <img src={img_url} className="card-img-top px-3" alt="image" />
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    This is a longer card with supporting text below as a
+                    natural lead-in to additional content. This content is a
+                    little bit longer.
+                  </p>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
         <Image src={img_url} width={200} height={200} />
         {JSON.stringify(games)}
       </main>
@@ -46,27 +128,24 @@ function HeaderCard() {
   return (
     <>
       <Navbar />
-      <div className={styles.apply_variable}>
-        <div class="container-sm rounded p-3 mt-5 mb-3 bg-danger text-center">
+      <div className={`${styles.apply_variable} container`}>
+        <div
+          className={`${styles.bg_red} container rounded p-3 mt-5 mb-3 text-center`}
+        >
           <h1>Carreras</h1>
         </div>
-        <div class="container-sm input-group mb-3">
-          <input
-            type="text"
-            class="form-control rounded"
-            placeholder="Introduce el nombre..."
-          ></input>
-          <button class="btn bg-danger ms-3 rounded" type="submit">
-            <i class="bi bi-search text-light"></i>
-          </button>
-        </div>
         <SearchBar find={() => {}} />
-        <Link href={"/realidadVirtual"}>
-          <span className={styles.arrow_icon}>
-            <ImArrowUpRight2 />
-          </span>
-          realidad virtual
-        </Link>
+        <div className="float-end">
+          <Link
+            href={"/realidadVirtual"}
+            className={`${styles.text_red} text-decoration-none`}
+          >
+            <span className={`${styles.bg_red} container p-0 m-2 text-dark`}>
+              <ImArrowUpRight2 />
+            </span>
+            realidad virtual
+          </Link>
+        </div>
       </div>
     </>
   );
@@ -81,7 +160,18 @@ function SearchBar({ find }) {
   }
   return (
     <>
-      <input placeholder="buscar..." value={input} onChange={handleInput} />
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control rounded"
+          placeholder="Introduce el nombre..."
+          value={input}
+          onChange={handleInput}
+        ></input>
+        <button className={`${styles.bg_red} btn ms-3 rounded`} type="submit">
+          <i class="bi bi-search text-light"></i>
+        </button>
+      </div>
     </>
   );
 }
