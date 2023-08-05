@@ -1,5 +1,7 @@
 .apply_variable {
   background-color: var(--gray-surface-color);
+  font-family: var(--dm-mono-font);
+  max-width: 600px;
 }
 
 .arrow_icon {
@@ -21,6 +23,18 @@
 
 .text_red {
   color: var(--red-accent-color);
+}
+
+.column {
+  max-width: 500px;
+  justify-self: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.card {
+  background-color: var(--gray-surface-color);
+  font-family: var(--dm-mono-font);
 }
 
 .card_rb {

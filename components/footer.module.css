@@ -1,0 +1,16 @@
+.apply_variable {
+  background-color: var(--graf-surface-color);
+  color: var(--gray-on-surface-color);
+  margin: 0px 10px 50px;
+  font-family: var(--poppins-font);
+  justify-content: center;
+}
+
+.column {
+  max-width: 425px;
+}
+
+.icon {
+  font-size: 30px;
+  color: var(--gray-on-surface-color);
+}

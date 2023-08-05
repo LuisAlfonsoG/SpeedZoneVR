@@ -7,6 +7,7 @@ import { ImArrowUpRight2 } from "react-icons/im";
 import { createClient } from "contentful";
 import Image from "next/image";
 import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 export const getStaticProps = async () => {
   const client = createClient({
@@ -32,93 +33,109 @@ export default function Catalogo({ games }) {
   return (
     <Layout>
       <header>
+        <Navbar />
         <HeaderCard />
       </header>
-      <main className={styles.main}>
-        <div class="row row-cols-1 row-cols-sm-2 my-5 mx-3 g-4">
-          <div class="col">
+      <main className={`${styles.main}`}>
+        <div class="row row-cols-1 row-cols-md-2 justify-content-center my-5 py-3 px-3">
+          <div class={`${styles.column} col`}>
             <div
-              className={`${styles.bg_gray} text-light border-3 border-dark card p-2 h-100`}
+              className={`${styles.card} text-light border-3 border-dark card p-2 h-100`}
             >
               <fieldset className={`${styles.card_rb} rounded-top`}>
-                <legend className={`${styles.text_red} float-none w-auto px-1`}>
-                  Videogame
+                <legend
+                  className={`${styles.text_red} float-none w-auto ps-2 pe-3`}
+                >
+                  {games.items[0].fields.tipo[0]}
                 </legend>
-                <img src={img_url} className="card-img-top px-3" alt="image" />
+                <Image
+                  src={img_url}
+                  className="card-img-top px-3"
+                  width={300}
+                  height={200}
+                  alt="image"
+                />
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    This is a longer card with supporting text below as a
-                    natural lead-in to additional content. This content is a
-                    little bit longer.
-                  </p>
+                  <h5 class="card-title">{games.items[0].fields.titulo}</h5>
+                  <p class="card-text">{games.items[0].fields.descripcion}</p>
                 </div>
               </fieldset>
             </div>
           </div>
-          <div class="col">
+          <div class={`${styles.column} col`}>
             <div
-              className={`${styles.bg_gray} text-light border-3 border-dark card p-2 h-100`}
+              className={`${styles.card} text-light border-3 border-dark card p-2 h-100`}
             >
               <fieldset className={`${styles.card_rb} rounded-top`}>
-                <legend className={`${styles.text_red} float-none w-auto px-1`}>
-                  Videogame
+                <legend
+                  className={`${styles.text_red} float-none w-auto ps-2 pe-3`}
+                >
+                  {games.items[0].fields.tipo[0]}
                 </legend>
-                <img src={img_url} className="card-img-top px-3" alt="image" />
+                <Image
+                  src={img_url}
+                  className="card-img-top px-3"
+                  width={300}
+                  height={200}
+                  alt="image"
+                />
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    This is a longer card with supporting text below as a
-                    natural lead-in to additional content. This content is a
-                    little bit longer.
-                  </p>
+                  <h5 class="card-title">{games.items[0].fields.titulo}</h5>
+                  <p class="card-text">{games.items[0].fields.descripcion}</p>
                 </div>
               </fieldset>
             </div>
           </div>
-          <div class="col">
+          <div class={`${styles.column} col`}>
             <div
-              className={`${styles.bg_gray} text-light border-3 border-dark card p-2 h-100`}
+              className={`${styles.card} text-light border-3 border-dark card p-2 h-100`}
             >
               <fieldset className={`${styles.card_rb} rounded-top`}>
-                <legend className={`${styles.text_red} float-none w-auto px-1`}>
-                  Videogame
+                <legend
+                  className={`${styles.text_red} float-none w-auto ps-2 pe-3`}
+                >
+                  {games.items[0].fields.tipo[0]}
                 </legend>
-                <img src={img_url} className="card-img-top px-3" alt="image" />
+                <Image
+                  src={img_url}
+                  className="card-img-top px-3"
+                  width={300}
+                  height={200}
+                  alt="image"
+                />
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    This is a longer card with supporting text below as a
-                    natural lead-in to additional content. This content is a
-                    little bit longer.
-                  </p>
+                  <h5 class="card-title">{games.items[0].fields.titulo}</h5>
+                  <p class="card-text">{games.items[0].fields.descripcion}</p>
                 </div>
               </fieldset>
             </div>
           </div>
-          <div class="col">
+          <div class={`${styles.column} col`}>
             <div
-              className={`${styles.bg_gray} text-light border-3 border-dark card p-2 h-100`}
+              className={`${styles.card} text-light border-3 border-dark card p-2 h-100`}
             >
               <fieldset className={`${styles.card_rb} rounded-top`}>
-                <legend className={`${styles.text_red} float-none w-auto px-1`}>
-                  Videogame
+                <legend
+                  className={`${styles.text_red} float-none w-auto ps-2 pe-3`}
+                >
+                  {games.items[0].fields.tipo[0]}
                 </legend>
-                <img src={img_url} className="card-img-top px-3" alt="image" />
+                <Image
+                  src={img_url}
+                  className="card-img-top px-3"
+                  width={300}
+                  height={200}
+                  alt="image"
+                />
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    This is a longer card with supporting text below as a
-                    natural lead-in to additional content. This content is a
-                    little bit longer.
-                  </p>
+                  <h5 class="card-title">{games.items[0].fields.titulo}</h5>
+                  <p class="card-text">{games.items[0].fields.descripcion}</p>
                 </div>
               </fieldset>
             </div>
           </div>
         </div>
-        <Image src={img_url} width={200} height={200} />
-        {JSON.stringify(games)}
+        <Footer />
       </main>
     </Layout>
   );
@@ -127,17 +144,16 @@ export default function Catalogo({ games }) {
 function HeaderCard() {
   return (
     <>
-      <Navbar />
-      <div className={`${styles.apply_variable} container`}>
+      <div className={`${styles.apply_variable} container-md mt-5 pt-5 px-0`}>
         <div
-          className={`${styles.bg_red} container rounded p-3 mt-5 mb-3 text-center`}
+          className={`${styles.bg_red} container-fluid rounded py-3 my-3 text-center`}
         >
           <h1>Carreras</h1>
         </div>
         <SearchBar find={() => {}} />
         <div className="float-end">
           <Link
-            href={"/realidadVirtual"}
+            href={"./realidadVirtual"}
             className={`${styles.text_red} text-decoration-none`}
           >
             <span className={`${styles.bg_red} container p-0 m-2 text-dark`}>
