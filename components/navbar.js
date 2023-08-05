@@ -80,7 +80,7 @@ function Mobile({}) {
             className={`${styles.apply_variable} btn text-reset`}
             data-bs-dismiss="offcanvas"
           >
-            <i className={`${styles.x_icon} bi bi-x-lg`}></i>
+            <i className={`${styles.icon} bi bi-x-lg`}></i>
           </button>
         </div>
         <div class="offcanvas-body">
@@ -99,7 +99,7 @@ function Mobile({}) {
         </div>
       </div>
       <nav
-        className={`${styles.apply_variable} navbar nav-justified navbar-expand-lg fixed-top navbar-dark`}
+        className={`${styles.apply_variable} navbar nav-justified navbar-expand-lg fixed-top`}
       >
         <div className="container-fluid justify-content-between">
           <button
@@ -108,7 +108,7 @@ function Mobile({}) {
             data-bs-toggle="offcanvas"
             data-bs-target="#demo"
           >
-            <span className="navbar-toggler-icon"></span>
+            <i className={`${styles.icon} bi bi-list`}></i>
           </button>
 
           <Image
