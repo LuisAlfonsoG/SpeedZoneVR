@@ -1,0 +1,9 @@
+.apply_variable {
+  background: rgba(0, 0, 0, 0.7);
+  color: var(--gray-on-surface-color);
+  font-family: var(--poppins-font);
+}
+
+.icon {
+  font-size: 30px;
+}
