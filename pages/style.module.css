@@ -1,0 +1,56 @@
+.bg_image {
+  opacity: 0.5;
+}
+
+.box {
+  padding: 15%;
+}
+
+.header1 {
+  text-indent: 15px;
+  line-height: 35px;
+  max-width: 80%;
+  font-family: var(--poppins-font);
+  font-size: 34px;
+  font-weight: bold;
+  color: var(--white-on-surface-color);
+  position: relative;
+}
+
+.header2 {
+  color: var(--gray-on-surface-color);
+  font-family: var(--dm-mono-font);
+  margin: 5% 0px;
+  max-width: 40%;
+  font-size: 15px;
+}
+
+.parallelogram {
+  width: 180px;
+  height: 45px;
+  transform: skew(-25deg);
+  background: var(--red-accent-color);
+  position: absolute;
+  opacity: 0.9;
+}
+
+.btn_1 {
+  background-color: var(--red-accent-color);
+  color: var(--white-on-surface-color);
+  border-style: none;
+  border-radius: 5px;
+  margin: 0px 5px;
+  width: 120px;
+  opacity: 0.9;
+}
+
+.btn_2 {
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  border-color: var(--white-on-surface-color);
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--white-on-surface-color);
+  margin: 0px 5px;
+  width: 120px;
+}

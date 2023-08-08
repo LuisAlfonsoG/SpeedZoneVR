@@ -103,7 +103,7 @@ function Mobile({}) {
       >
         <div className="container-fluid justify-content-between">
           <button
-            className={`${styles.apply_variable} btn`}
+            className={`${styles.button} btn`}
             type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#demo"
