@@ -1,9 +1,12 @@
+.apply_variable {
+}
+
 .bg_image {
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 .box {
-  padding: 15%;
+  padding: 30% 15%;
 }
 
 .header1 {
@@ -37,11 +40,15 @@
 .btn_1 {
   background-color: var(--red-accent-color);
   color: var(--white-on-surface-color);
+  font-family: var(--poppins-font);
+  font-size: 12px;
   border-style: none;
   border-radius: 5px;
   margin: 0px 5px;
   width: 120px;
+  height: 25px;
   opacity: 0.9;
+  box-shadow: -2px 2px 5px var(--gray-surface-color);
 }
 
 .btn_2 {
@@ -50,7 +57,89 @@
   border-radius: 5px;
   border-color: var(--white-on-surface-color);
   background-color: rgba(0, 0, 0, 0);
+  font-family: var(--poppins-font);
+  font-size: 12px;
   color: var(--white-on-surface-color);
   margin: 0px 5px;
   width: 120px;
+  height: 25px;
+}
+
+.section {
+  display: block;
+  border-style: solid;
+  border-width: 8px 0px 0px 0px;
+  border-color: var(--red-accent-color);
+  color: var(--red-accent-color);
+}
+
+legend.text_left {
+  float: none;
+  width: auto;
+  font-size: 16px;
+  margin-left: 10%;
+  padding: 0px 15px;
+}
+
+legend.text_right {
+  float: none;
+  width: auto;
+  font-size: 16px;
+  margin-left: 75%;
+  padding: 0px 15px;
+}
+
+.scroll_container {
+  display: grid;
+  height: auto;
+  grid-auto-flow: column;
+  overflow-y: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  position: relative;
+}
+
+.card {
+  background-color: var(--gray-on-surface-color);
+  width: 175px;
+  height: 175px;
+  border-radius: 10px;
+  scroll-snap-align: center;
+  margin: 0 5px 0;
+  overflow: hidden;
+}
+
+.btns_container {
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+  height: 175px;
+  justify-content: space-between;
+  position: absolute;
+}
+
+.scroll_btn_left {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--gray-on-surface-color);
+  justify-content: center;
+  align-content: center;
+  border-style: none;
+  position: relative;
+  width: 100px;
+  height: 100%;
+  font-size: 80px;
+  z-index: 1;
+}
+
+.scroll_btn_right {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--gray-on-surface-color);
+  justify-content: center;
+  align-content: center;
+  border-style: none;
+  position: relative;
+  width: 100px;
+  height: 100%;
+  font-size: 80px;
+  z-index: 1;
 }
