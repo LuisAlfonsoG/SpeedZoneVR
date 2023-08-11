@@ -36,7 +36,7 @@ function Desktop({}) {
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link" href="#">
-                Catálogos
+                Nosotros
               </a>
             </li>
           </ul>
@@ -50,14 +50,14 @@ function Desktop({}) {
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link" href="#">
-                Promociones
+                Servicios
               </a>
             </li>
           </ul>
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link" href="#">
-                Ubicación
+                Promociones
               </a>
             </li>
           </ul>
@@ -88,13 +88,13 @@ function Mobile({}) {
             Inicio
           </a>
           <a class="nav-link mb-2" href="#">
-            Catálogos
+            Nosotros
           </a>
           <a class="nav-link mb-2" href="#">
-            Promociones
+            Servicios
           </a>
           <a class="nav-link" href="#">
-            Ubicación
+            Promociones
           </a>
         </div>
       </div>
