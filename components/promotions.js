@@ -1,10 +1,16 @@
 import { useRef, useEffect } from "react";
 import styles from "./promotions.module.css";
+import Image from "next/image";
 
 export default function Promotions({}) {
   const scrollRef = useRef();
   const leftRef = useRef();
   const rightRef = useRef();
+  const promotions = [];
+
+  for (let i = 0; i < 10; i++) {
+    promotions.push("/prom.png");
+  }
 
   useEffect(() => {
     const left = leftRef.current;
@@ -50,14 +56,20 @@ export default function Promotions({}) {
           </button>
         </div>
         <div ref={scrollRef} className={`${styles.scroll_container}`}>
-          <div className={styles.card}></div>
-          <div className={styles.card}></div>
-          <div className={styles.card}></div>
-          <div className={styles.card}></div>
-          <div className={styles.card}></div>
-          <div className={styles.card}></div>
-          <div className={styles.card}></div>
-          <div className={styles.card}></div>
+          {promotions.map((promotion) => {
+            return (
+              <>
+                <div className={styles.card}>
+                  <Image
+                    src={promotion}
+                    layout="fill"
+                    objectFit="cover"
+                    alt="Image"
+                  ></Image>
+                </div>
+              </>
+            );
+          })}
         </div>
       </div>
     </>

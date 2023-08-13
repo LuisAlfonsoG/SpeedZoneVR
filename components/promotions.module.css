@@ -6,17 +6,17 @@
   overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;
   position: relative;
-  padding: 0 100px;
+  padding: 0 200px;
 }
 
 .card {
-  background-color: var(--gray-on-surface-color);
   width: 175px;
   height: 175px;
   border-radius: 10px;
   scroll-snap-align: center;
   margin: 0 5px 0;
   overflow: hidden;
+  position: relative;
 }
 
 .btns_container {

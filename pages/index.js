@@ -3,6 +3,8 @@ import Footer from "@/components/footer";
 import Image from "next/image";
 import styles from "./style.module.css";
 import Promotions from "@/components/promotions";
+import Us from "@/components/us.js";
+import Prices from "@/components/prices.js";
 
 export default function Home() {
   return (
@@ -31,12 +33,14 @@ export default function Home() {
         <fieldset className={styles.section}>
           <legend className={styles.text_left}>Nuestras promociones</legend>
         </fieldset>
+        <Us />
         <fieldset className={styles.section}>
           <legend className={styles.text_right}>Galería</legend>
         </fieldset>
         <fieldset className={styles.section}>
           <legend className={styles.text_left}>Precios</legend>
         </fieldset>
+        <Prices />
       </div>
       <Footer />
     </>

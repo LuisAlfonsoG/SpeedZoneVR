@@ -1,0 +1,50 @@
+.main {
+  display: grid;
+  padding: 30px 50px;
+  color: var(--white-on-surface-color);
+}
+
+.container {
+  display: flex;
+  position: relative;
+  height: fit-content;
+  margin: 20px 0;
+}
+
+.box {
+  display: grid;
+  width: 50%;
+}
+
+.header {
+  font-family: var(--dm-mono-font);
+}
+
+.description {
+  font-size: 12px;
+  font-family: var(--poppins-font);
+}
+
+.price_box {
+  display: flex;
+  font-family: var(--dm-mono-font);
+}
+
+.price {
+  color: var(--red-accent-color);
+  margin-right: 20px;
+}
+
+.img_container {
+  display: flex;
+  position: absolute;
+  height: 90%;
+  width: 60%;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.img {
+  background: linear-gradient(to right, rgba(0, 0, 0), rgba(0, 0, 0.1));
+}
