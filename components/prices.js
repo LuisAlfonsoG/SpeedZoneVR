@@ -61,9 +61,8 @@ function Price({ title, description, prices, img }) {
           <Image
             src={img}
             layout="fill"
-            objectFit="cover"
+            objectFit="contain"
             alt="Image"
-            className={styles.img}
           ></Image>
         </div>
       </div>

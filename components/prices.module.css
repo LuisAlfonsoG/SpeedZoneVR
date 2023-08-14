@@ -13,16 +13,20 @@
 
 .box {
   display: grid;
-  width: 50%;
+  width: 60%;
 }
 
 .header {
   font-family: var(--dm-mono-font);
+  font-size: 48px;
+  font-weight: 300;
 }
 
 .description {
   font-size: 12px;
   font-family: var(--poppins-font);
+  margin-bottom: 50px;
+  width: 75%;
 }
 
 .price_box {
@@ -38,13 +42,9 @@
 .img_container {
   display: flex;
   position: absolute;
-  height: 90%;
+  height: 80%;
   width: 60%;
   bottom: 0;
   right: 0;
   z-index: -1;
-}
-
-.img {
-  background: linear-gradient(to right, rgba(0, 0, 0), rgba(0, 0, 0.1));
 }

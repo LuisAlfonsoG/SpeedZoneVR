@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "./catalogos.module.css";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Layout from "@/components/layout";
 import { BsArrowUpRight } from "react-icons/bs";
 import { ImArrowUpRight2 } from "react-icons/im";
@@ -24,6 +24,14 @@ export const getStaticProps = async () => {
 };
 
 export default function Catalogo({ games }) {
+  const [games_subset, setGames] = useState(games.items);
+
+  const handleClick = (value) => {
+    const aux = games_subset.slice();
+    aux.push(games.items[0]);
+    setGames(aux);
+    alert(games_subset.length + " search: " + value);
+  };
   console.log(games);
   let img_url = "https:" + games.items[0].fields.media[0].fields.file.url;
   let img_width =
@@ -34,114 +42,53 @@ export default function Catalogo({ games }) {
     <Layout>
       <header>
         <Navbar />
-        <HeaderCard />
+        <HeaderCard find={handleClick} />
       </header>
       <main className={`${styles.main}`}>
         <div class="row row-cols-1 row-cols-md-2 justify-content-center my-5 py-3 px-3">
-          <div class={`${styles.column} col`}>
-            <div
-              className={`${styles.card} text-light border-3 border-dark card p-2 h-100`}
-            >
-              <fieldset className={`${styles.card_rb} rounded-top`}>
-                <legend
-                  className={`${styles.text_red} float-none w-auto ps-2 pe-3`}
-                >
-                  {games.items[0].fields.tipo[0]}
-                </legend>
-                <Image
-                  src={img_url}
-                  className="card-img-top px-3"
-                  width={300}
-                  height={200}
-                  alt="image"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">{games.items[0].fields.titulo}</h5>
-                  <p class="card-text">{games.items[0].fields.descripcion}</p>
+          {games_subset.map((game, index) => {
+            return (
+              <>
+                <div class={`${styles.column} col`}>
+                  <div
+                    className={`${styles.card} text-light border-3 border-dark card p-2 h-100`}
+                  >
+                    <fieldset className={`${styles.card_rb} rounded-top`}>
+                      <legend
+                        className={`${styles.text_red} float-none w-auto ps-2 pe-3`}
+                      >
+                        Videogame
+                      </legend>
+                      <Image
+                        src={img_url}
+                        className="card-img-top px-3"
+                        width={300}
+                        height={200}
+                        alt="image"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">
+                          {games_subset[0].fields.titulo + " " + index}
+                        </h5>
+                        <p class="card-text">
+                          {games_subset[0].fields.descripcion}
+                        </p>
+                      </div>
+                    </fieldset>
+                  </div>
                 </div>
-              </fieldset>
-            </div>
-          </div>
-          <div class={`${styles.column} col`}>
-            <div
-              className={`${styles.card} text-light border-3 border-dark card p-2 h-100`}
-            >
-              <fieldset className={`${styles.card_rb} rounded-top`}>
-                <legend
-                  className={`${styles.text_red} float-none w-auto ps-2 pe-3`}
-                >
-                  {games.items[0].fields.tipo[0]}
-                </legend>
-                <Image
-                  src={img_url}
-                  className="card-img-top px-3"
-                  width={300}
-                  height={200}
-                  alt="image"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">{games.items[0].fields.titulo}</h5>
-                  <p class="card-text">{games.items[0].fields.descripcion}</p>
-                </div>
-              </fieldset>
-            </div>
-          </div>
-          <div class={`${styles.column} col`}>
-            <div
-              className={`${styles.card} text-light border-3 border-dark card p-2 h-100`}
-            >
-              <fieldset className={`${styles.card_rb} rounded-top`}>
-                <legend
-                  className={`${styles.text_red} float-none w-auto ps-2 pe-3`}
-                >
-                  {games.items[0].fields.tipo[0]}
-                </legend>
-                <Image
-                  src={img_url}
-                  className="card-img-top px-3"
-                  width={300}
-                  height={200}
-                  alt="image"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">{games.items[0].fields.titulo}</h5>
-                  <p class="card-text">{games.items[0].fields.descripcion}</p>
-                </div>
-              </fieldset>
-            </div>
-          </div>
-          <div class={`${styles.column} col`}>
-            <div
-              className={`${styles.card} text-light border-3 border-dark card p-2 h-100`}
-            >
-              <fieldset className={`${styles.card_rb} rounded-top`}>
-                <legend
-                  className={`${styles.text_red} float-none w-auto ps-2 pe-3`}
-                >
-                  {games.items[0].fields.tipo[0]}
-                </legend>
-                <Image
-                  src={img_url}
-                  className="card-img-top px-3"
-                  width={300}
-                  height={200}
-                  alt="image"
-                />
-                <div class="card-body">
-                  <h5 class="card-title">{games.items[0].fields.titulo}</h5>
-                  <p class="card-text">{games.items[0].fields.descripcion}</p>
-                </div>
-              </fieldset>
-            </div>
-          </div>
+              </>
+            );
+          })}
         </div>
+        a
         <Footer />
       </main>
     </Layout>
   );
 }
 
-function HeaderCard() {
+function HeaderCard({ find }) {
   return (
     <>
       <div className={`${styles.apply_variable} container-md mt-5 pt-5 px-0`}>
@@ -150,7 +97,7 @@ function HeaderCard() {
         >
           <h1>Carreras</h1>
         </div>
-        <SearchBar find={() => {}} />
+        <SearchBar find={find} />
         <div className="float-end">
           <Link
             href={"./realidadVirtual"}
@@ -169,9 +116,23 @@ function HeaderCard() {
 
 function SearchBar({ find }) {
   const [input, setInput] = useState("");
+  const buttonRef = useRef();
 
+  useEffect(() => {
+    const button = buttonRef.current;
+
+    const handleClick = () => {
+      find(input);
+    };
+
+    button.addEventListener("click", handleClick);
+
+    return () => {
+      button.removeEventListener("click", handleClick);
+    };
+  });
   function handleInput(event) {
-    find(event.target.value);
+    //find(event.target.value);
     setInput(event.target.value);
   }
   return (
@@ -184,7 +145,11 @@ function SearchBar({ find }) {
           value={input}
           onChange={handleInput}
         ></input>
-        <button className={`${styles.bg_red} btn ms-3 rounded`} type="submit">
+        <button
+          ref={buttonRef}
+          className={`${styles.bg_red} btn ms-3 rounded`}
+          type="submit"
+        >
           <i class="bi bi-search text-light"></i>
         </button>
       </div>
