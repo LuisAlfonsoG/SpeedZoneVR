@@ -1,0 +1,11 @@
+.apply_variable {
+  display: flex;
+  padding: 50px;
+}
+
+.img_container {
+  position: relative;
+  border-radius: 8px;
+  align-content: end;
+  padding: 5px;
+}

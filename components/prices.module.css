@@ -1,14 +1,15 @@
 .main {
   display: grid;
-  padding: 30px 50px;
+  padding: 30px;
   color: var(--white-on-surface-color);
+  justify-content: center;
 }
 
 .container {
   display: flex;
   position: relative;
-  height: fit-content;
   margin: 20px 0;
+  height: 500px;
 }
 
 .box {
@@ -25,7 +26,7 @@
 .description {
   font-size: 12px;
   font-family: var(--poppins-font);
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   width: 75%;
 }
 
@@ -42,9 +43,19 @@
 .img_container {
   display: flex;
   position: absolute;
-  height: 80%;
+  height: 90%;
   width: 60%;
   bottom: 0;
   right: 0;
   z-index: -1;
+}
+
+.btn {
+  background-color: var(--red-accent-color);
+  color: var(--white-on-surface-color);
+  border-radius: 5px;
+  border-style: none;
+  height: 30px;
+  font-family: var(--dm-mono-font);
+  font-size: 14px;
 }

@@ -1,5 +1,6 @@
 import styles from "./prices.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Prices({}) {
   const sm = {
@@ -25,45 +26,47 @@ export default function Prices({}) {
           description={sm.description}
           prices={sm.prices}
           img={sm.img}
+          link="../pages/catalogos/carreras"
         ></Price>
         <Price
           title={rv.title}
           description={rv.description}
           prices={rv.prices}
           img={rv.img}
+          link="../pages/catalogos/carreras"
         ></Price>
       </div>
     </>
   );
 }
 
-function Price({ title, description, prices, img }) {
+function Price({ title, description, prices, img, link }) {
   return (
     <>
       <div className={styles.container}>
         <div className={styles.box}>
           <h1 className={styles.header}>{title}</h1>
           <p className={styles.description}>{description}</p>
-          {prices.map((price, index) => {
-            return (
-              <>
-                <div className={styles.price_box}>
-                  <span className={styles.price}>{"$" + price}</span>
-                  <span className={styles.session}>
-                    {"Sesión " + (index + 1) + "hr" + (index > 0 ? "s" : "")}
-                  </span>
-                </div>
-              </>
-            );
-          })}
+          <div>
+            {prices.map((price, index) => {
+              return (
+                <>
+                  <div className={styles.price_box}>
+                    <span className={styles.price}>{"$" + price}</span>
+                    <span className={styles.session}>
+                      {"Sesión " + (index + 1) + "hr" + (index > 0 ? "s" : "")}
+                    </span>
+                  </div>
+                </>
+              );
+            })}
+          </div>
+          <Link href={link}>
+            <button className={styles.btn}>Catálogo de juegos</button>
+          </Link>
         </div>
         <div className={styles.img_container}>
-          <Image
-            src={img}
-            layout="fill"
-            objectFit="contain"
-            alt="Image"
-          ></Image>
+          <Image src={img} layout="fill" objectFit="cover" alt="Image"></Image>
         </div>
       </div>
     </>
