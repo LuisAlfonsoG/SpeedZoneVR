@@ -1,5 +1,4 @@
 import styles from "./footer.module.css";
-import Image from "next/image";
 
 export default function Footer({}) {
   return (
@@ -47,12 +46,15 @@ export default function Footer({}) {
           </div>
           <div className={`col justify-content-center mt-3 me-2`}>
             <div className={`d-flex justify-content-center`}>
-              <Image
-                src={`https://motor.elpais.com/wp-content/uploads/2022/01/google-maps-22-1046x616.jpg`}
-                width={400}
-                height={400}
-                alt={`Map`}
-              ></Image>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.851848013083!2d-100.4932917260781!3d20.634894738744013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d3510158ad96c9%3A0xf0e59e5bc4bf0616!2sAv.%20de%20la%20Cantera%202361-Local%20I%2C%2076116%20Qro.!5e0!3m2!1ses-419!2smx!4v1692295579571!5m2!1ses-419!2smx"
+                width="500"
+                height="400"
+                style={{ border: 0 }}
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
         </div>

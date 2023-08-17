@@ -5,6 +5,7 @@ import styles from "./style.module.css";
 import Promotions from "@/components/promotions";
 import Us from "@/components/us.js";
 import Prices from "@/components/prices.js";
+import Gallery from "@/components/gallery";
 
 export default function Home() {
   return (
@@ -37,6 +38,7 @@ export default function Home() {
         <fieldset className={styles.section}>
           <legend className={styles.text_right}>Galería</legend>
         </fieldset>
+        <Gallery />
         <fieldset className={styles.section}>
           <legend className={styles.text_left}>Precios</legend>
         </fieldset>

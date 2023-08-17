@@ -1,11 +1,32 @@
 .apply_variable {
   display: flex;
-  padding: 50px;
+  padding: 25px 40px;
+  aspect-ratio: 16/10;
+  overflow-x: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+.col {
+  height: 100%;
 }
 
 .img_container {
   position: relative;
   border-radius: 8px;
-  align-content: end;
-  padding: 5px;
+  align-items: end;
+  margin: 3px;
+  font-family: var(--dm-mono-font);
+  color: var(--white-on-surface-color);
+  border-radius: 10px;
+}
+
+.title {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+}
+
+.img {
+  border-radius: 5px;
 }
