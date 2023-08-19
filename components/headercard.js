@@ -3,11 +3,21 @@ import Link from "next/link";
 import { ImArrowUpRight2 } from "react-icons/im";
 import { useState } from "react";
 
-export default function HeaderCard({ title, linkText, link, games, setState }) {
-  const handleClick = (value) => {
+export default function HeaderCard({ title, filter, games, setState }) {
+  const findTitle = (value) => {
     const aux = new Array();
     games.map((game, index) => {
       if (game.fields.titulo.includes(value)) {
+        aux.push(index);
+      }
+    });
+    setState(aux);
+  };
+
+  const findType = (value) => {
+    const aux = new Array();
+    games.map((game, index) => {
+      if (game.fields.tipo[0].includes(value)) {
         aux.push(index);
       }
     });
@@ -22,17 +32,28 @@ export default function HeaderCard({ title, linkText, link, games, setState }) {
         >
           <h1>{title}</h1>
         </div>
-        <SearchBar find={handleClick} />
-        <div className="float-end">
-          <Link
-            href={link}
-            className={`${styles.text_red} text-decoration-none`}
+        <SearchBar find={findTitle} />
+        <div className="float-start">
+          <button
+            onClick={() => findType("Carreras")}
+            className={`${styles.filter}`}
           >
             <span className={`${styles.bg_red} container p-0 m-2 text-dark`}>
               <ImArrowUpRight2 />
             </span>
-            {linkText}
-          </Link>
+            Carreras
+          </button>
+        </div>
+        <div className="float-end">
+          <button
+            onClick={() => findType("Realidad Virtual")}
+            className={`${styles.filter}`}
+          >
+            <span className={`${styles.bg_red} container p-0 m-2 text-dark`}>
+              <ImArrowUpRight2 />
+            </span>
+            Realidad Virtual
+          </button>
         </div>
       </div>
     </>

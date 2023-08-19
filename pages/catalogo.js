@@ -1,4 +1,4 @@
-import styles from "./catalogos.module.css";
+import styles from "./catalogo.module.css";
 import { useState } from "react";
 import Layout from "@/components/layout";
 import { createClient } from "contentful";
@@ -27,6 +27,9 @@ export default function Catalogo({ games }) {
   for (let i = 0; i < 9; i++) {
     aux.push(JSON.parse(JSON.stringify(games.items[0])));
     aux[i].fields.titulo += "" + i;
+    if (i % 2 == 0) {
+      aux[i].fields.tipo[0] = "Realidad Virtual";
+    }
     ind.push(i + 1);
   }
   const [indexes, setIndexes] = useState(ind);
@@ -41,13 +44,7 @@ export default function Catalogo({ games }) {
     <Layout>
       <header>
         <Navbar />
-        <HeaderCard
-          title="Carreras"
-          linkText="Realidad Virtual"
-          link="./realidadVirtual"
-          games={aux}
-          setState={setIndexes}
-        />
+        <HeaderCard title="Catálogo" games={aux} setState={setIndexes} />
       </header>
       <main className={`${styles.main}`}>
         <div class="row row-cols-1 row-cols-md-2 justify-content-center my-5 py-3 px-3">
@@ -62,7 +59,7 @@ export default function Catalogo({ games }) {
                       <legend
                         className={`${styles.text_red} float-none w-auto ps-2 pe-3`}
                       >
-                        Videogame
+                        {aux[index].fields.tipo[0]}
                       </legend>
                       <Image
                         src={img_url}

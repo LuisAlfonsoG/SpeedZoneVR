@@ -4,6 +4,12 @@
   max-width: 600px;
 }
 
+.filter {
+  background-color: transparent;
+  border-style: none;
+  color: var(--red-accent-color);
+}
+
 .bg_red {
   background-color: var(--red-accent-color);
 }
