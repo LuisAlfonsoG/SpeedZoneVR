@@ -1,5 +1,6 @@
 import styles from "./navbar.module.css";
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export default function Navbar({}) {
@@ -27,18 +28,18 @@ function Desktop({}) {
       >
         <div class="container">
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+            <div class="nav-item">
+              <Link class="nav-link" href="/">
                 Inicio
-              </a>
-            </li>
+              </Link>
+            </div>
           </ul>
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+            <div class="nav-item">
+              <Link class="nav-link" href="/#us" scroll={false}>
                 Nosotros
-              </a>
-            </li>
+              </Link>
+            </div>
           </ul>
           <Image
             src="/SpeedZoneVR-logo.png"
@@ -48,18 +49,18 @@ function Desktop({}) {
             alt="Logo"
           ></Image>
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+            <div class="nav-item">
+              <Link class="nav-link" href="/#services" scroll={false}>
                 Servicios
-              </a>
-            </li>
+              </Link>
+            </div>
           </ul>
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+            <div class="nav-item">
+              <Link class="nav-link" href="/#promotions" scroll={false}>
                 Promociones
-              </a>
-            </li>
+              </Link>
+            </div>
           </ul>
         </div>
       </nav>
@@ -84,18 +85,18 @@ function Mobile({}) {
           </button>
         </div>
         <div class="offcanvas-body">
-          <a class="nav-link mb-2" href="#">
+          <Link class="nav-link mb-2" href="/">
             Inicio
-          </a>
-          <a class="nav-link mb-2" href="#">
+          </Link>
+          <Link class="nav-link mb-2" href="/#us" scroll={false}>
             Nosotros
-          </a>
-          <a class="nav-link mb-2" href="#">
+          </Link>
+          <Link class="nav-link mb-2" href="/#services" scroll={false}>
             Servicios
-          </a>
-          <a class="nav-link" href="#">
+          </Link>
+          <Link class="nav-link" href="/#promotions" scroll={false}>
             Promociones
-          </a>
+          </Link>
         </div>
       </div>
       <nav

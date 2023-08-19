@@ -26,14 +26,14 @@ export default function Prices({}) {
           description={sm.description}
           prices={sm.prices}
           img={sm.img}
-          link="../pages/catalogos/carreras"
+          link="../catalogos/carreras"
         ></Price>
         <Price
           title={rv.title}
           description={rv.description}
           prices={rv.prices}
           img={rv.img}
-          link="../pages/catalogos/carreras"
+          link="../catalogos/realidadVirtual"
         ></Price>
       </div>
     </>

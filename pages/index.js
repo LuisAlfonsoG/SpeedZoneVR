@@ -30,11 +30,15 @@ export default function Home() {
           <button className={styles.btn_1}>Button</button>
           <button className={styles.btn_2}>Button</button>
         </div>
-        <Promotions />
+        <div id="promotions">
+          <Promotions />
+        </div>
         <fieldset className={styles.section}>
           <legend className={styles.text_left}>Nuestras promociones</legend>
         </fieldset>
-        <Us />
+        <div id="us">
+          <Us />
+        </div>
         <fieldset className={styles.section}>
           <legend className={styles.text_right}>Galería</legend>
         </fieldset>
@@ -42,7 +46,9 @@ export default function Home() {
         <fieldset className={styles.section}>
           <legend className={styles.text_left}>Precios</legend>
         </fieldset>
-        <Prices />
+        <div id="services">
+          <Prices />
+        </div>
       </div>
       <Footer />
     </>
