@@ -2,11 +2,25 @@ import styles from "./us.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import { ImArrowUpRight2 } from "react-icons/im";
+import { useState, useEffect } from "react";
 
 export default function Us({}) {
+  const [windowSize, setWindowSize] = useState(0);
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowSize([window.innerWidth, window.innerHeight]);
+    };
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
+
   return (
     <>
-      <div className={styles.apply_variable}>
+      <div className={windowSize[0] > 576 ? styles.apply_variable : styles.mobile}>
         <div clasName={styles.img_container}>
           <div className={styles.square}></div>
           <Image

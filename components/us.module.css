@@ -8,6 +8,16 @@
   justify-content: center;
 }
 
+.mobile {
+  display: grid;
+  height: auto;
+  padding: 50px;
+  color: var(--white-on-surface-color);
+  font-family: var(--dm-mono-font);
+  justify-items: center;
+  justify-content: center;
+}
+
 p.text {
   font-size: 12px;
   font-family: var(--poppins-font);
