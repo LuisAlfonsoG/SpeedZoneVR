@@ -1,5 +1,6 @@
 import styles from "./navbar.module.css";
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export default function Navbar({}) {
@@ -27,18 +28,18 @@ function Desktop({}) {
       >
         <div class="container">
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+            <div class="nav-item">
+              <Link class="nav-link" href="/">
                 Inicio
-              </a>
-            </li>
+              </Link>
+            </div>
           </ul>
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                Catálogos
-              </a>
-            </li>
+            <div class="nav-item">
+              <Link class="nav-link" href="/#us" scroll={false}>
+                Nosotros
+              </Link>
+            </div>
           </ul>
           <Image
             src="/SpeedZoneVR-logo.png"
@@ -48,18 +49,18 @@ function Desktop({}) {
             alt="Logo"
           ></Image>
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                Promociones
-              </a>
-            </li>
+            <div class="nav-item">
+              <Link class="nav-link" href="/#services" scroll={false}>
+                Servicios
+              </Link>
+            </div>
           </ul>
           <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                Ubicación
-              </a>
-            </li>
+            <div class="nav-item">
+              <Link class="nav-link" href="/#promotions" scroll={false}>
+                Promociones
+              </Link>
+            </div>
           </ul>
         </div>
       </nav>
@@ -84,18 +85,18 @@ function Mobile({}) {
           </button>
         </div>
         <div class="offcanvas-body">
-          <a class="nav-link mb-2" href="#">
+          <Link class="nav-link mb-2" href="/">
             Inicio
-          </a>
-          <a class="nav-link mb-2" href="#">
-            Catálogos
-          </a>
-          <a class="nav-link mb-2" href="#">
+          </Link>
+          <Link class="nav-link mb-2" href="/#us" scroll={false}>
+            Nosotros
+          </Link>
+          <Link class="nav-link mb-2" href="/#services" scroll={false}>
+            Servicios
+          </Link>
+          <Link class="nav-link" href="/#promotions" scroll={false}>
             Promociones
-          </a>
-          <a class="nav-link" href="#">
-            Ubicación
-          </a>
+          </Link>
         </div>
       </div>
       <nav
@@ -103,7 +104,7 @@ function Mobile({}) {
       >
         <div className="container-fluid justify-content-between">
           <button
-            className={`${styles.apply_variable} btn`}
+            className={`${styles.button} btn`}
             type="button"
             data-bs-toggle="offcanvas"
             data-bs-target="#demo"

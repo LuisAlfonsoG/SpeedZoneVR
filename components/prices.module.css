@@ -1,0 +1,61 @@
+.main {
+  display: grid;
+  padding: 30px;
+  color: var(--white-on-surface-color);
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  margin: 20px 0;
+  height: 400px;
+}
+
+.box {
+  display: grid;
+  width: 60%;
+}
+
+.header {
+  font-family: var(--dm-mono-font);
+  font-size: 48px;
+  font-weight: 300;
+}
+
+.description {
+  font-size: 12px;
+  font-family: var(--poppins-font);
+  margin-bottom: 20px;
+  width: 75%;
+}
+
+.price_box {
+  display: flex;
+  font-family: var(--dm-mono-font);
+}
+
+.price {
+  color: var(--red-accent-color);
+  margin-right: 20px;
+}
+
+.img_container {
+  display: flex;
+  position: absolute;
+  height: 85%;
+  width: 60%;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.btn {
+  background-color: var(--red-accent-color);
+  color: var(--white-on-surface-color);
+  border-radius: 5px;
+  border-style: none;
+  height: 30px;
+  font-family: var(--dm-mono-font);
+  font-size: 14px;
+}

@@ -1,0 +1,19 @@
+.apply_variable {
+  background-color: var(--gray-surface-color);
+  font-family: var(--dm-mono-font);
+  max-width: 600px;
+}
+
+.filter {
+  background-color: transparent;
+  border-style: none;
+  color: var(--red-accent-color);
+}
+
+.bg_red {
+  background-color: var(--red-accent-color);
+}
+
+.text_red {
+  color: var(--red-accent-color);
+}

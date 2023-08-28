@@ -4,6 +4,10 @@
   font-family: var(--poppins-font);
 }
 
+.button {
+  color: var(--gray-on-surface-color)
+}
+
 .icon {
   font-size: 30px;
 }
