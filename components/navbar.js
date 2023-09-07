@@ -3,8 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
-export default function Navbar({}) {
+export default function Navbar({ }) {
   const [windowSize, setWindowSize] = useState(0);
+
   useEffect(() => {
     const handleWindowResize = () => {
       setWindowSize([window.innerWidth, window.innerHeight]);
@@ -17,10 +18,19 @@ export default function Navbar({}) {
     };
   }, []);
 
-  return windowSize[0] > 576 ? <Desktop /> : <Mobile />;
+  return (
+    <>
+      <div className={styles.desktop}>
+        <Desktop />
+      </div>
+      <div className={styles.mobile}>
+        <Mobile />
+      </div>
+    </>
+  )
 }
 
-function Desktop({}) {
+function Desktop({ }) {
   return (
     <>
       <nav
@@ -68,7 +78,7 @@ function Desktop({}) {
   );
 }
 
-function Mobile({}) {
+function Mobile({ }) {
   return (
     <>
       <div
