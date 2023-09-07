@@ -4,7 +4,7 @@
   padding: 50px;
   color: var(--white-on-surface-color);
   font-family: var(--dm-mono-font);
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
@@ -65,4 +65,44 @@ p.text {
 .image {
   position: relative;
   z-index: 1;
+}
+
+
+.expand_button{
+  background: none;
+  border: none;
+}
+
+.expand_section{
+  transition: all 0.2s ease-in-out;
+}
+
+.bold_subtitle{
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.rotate_up{
+  transform: rotate(0);
+  animation: up 0.2s ease-in-out forwards;
+}
+.rotate_down{
+  transform: rotate(180deg);
+  animation: down 0.2s ease-in-out forwards;
+}
+
+@keyframes up {
+  from{
+    transform: rotate(0);
+  } to{
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes down {
+  from{
+    transform: rotate(180deg);
+  } to{
+    transform: rotate(0);
+  }
 }

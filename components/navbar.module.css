@@ -11,3 +11,21 @@
 .icon {
   font-size: 30px;
 }
+
+.desktop{
+  display: block;
+}
+
+.mobile{
+  display: none;
+}
+
+@media (max-width: 576px){
+  .desktop{
+    display: none;
+  }
+  .mobile{
+    display: block;
+  }
+}
+

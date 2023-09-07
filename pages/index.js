@@ -22,10 +22,12 @@ export default function Home() {
         <div className={`${styles.box}`}>
           <div className={`${styles.parallelogram}`}></div>
           <h1 className={styles.header1}>
-            Carreras simuladas, victorias de verdad.
+            Carreras simuladas, <br /> 
+            victorias de verdad.
           </h1>
           <h6 className={styles.header2}>
-            Vive la experiencia detrás del volante.
+            Vive la experiencia <br /> 
+            detrás del volante.
           </h6>
           <button className={styles.btn_1}>Button</button>
           <button className={styles.btn_2}>Button</button>

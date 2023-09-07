@@ -6,7 +6,8 @@
 }
 
 .box {
-  padding: 30% 15%;
+  padding: 30% 0;
+  margin-left: 2rem;
 }
 
 .header1 {
@@ -14,18 +15,10 @@
   line-height: 35px;
   max-width: 80%;
   font-family: var(--poppins-font);
-  font-size: 34px;
+  font-size: 2.5rem;
   font-weight: bold;
   color: var(--white-on-surface-color);
   position: relative;
-}
-
-.header2 {
-  color: var(--gray-on-surface-color);
-  font-family: var(--dm-mono-font);
-  margin: 5% 0px;
-  max-width: 40%;
-  font-size: 15px;
 }
 
 .parallelogram {
@@ -37,6 +30,43 @@
   opacity: 0.9;
 }
 
+@media (min-width: 900px) {
+  .header1 {
+    font-size: 3rem;
+    line-height: 1;
+  }
+  .parallelogram{
+    width: 250px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 576px){
+  .box {
+    padding: 30% 0;
+    margin: 1rem;
+  }
+
+  .header1{
+    line-height: 1.1;
+    font-size: 2rem;
+    max-width: 100%;
+    text-indent: 5px;
+  }
+}
+
+
+
+.header2 {
+  color: var(--gray-on-surface-color);
+  font-family: var(--dm-mono-font);
+  margin: 5% 0px;
+  /* max-width: 40%; */
+  font-size: 1.5rem;
+}
+
+
+
 .btn_1 {
   background-color: var(--red-accent-color);
   color: var(--white-on-surface-color);
@@ -45,10 +75,10 @@
   border-style: none;
   border-radius: 5px;
   margin: 0px 5px;
-  width: 120px;
-  height: 25px;
+  width: 10rem;
+  height: 2.2rem;
   opacity: 0.9;
-  box-shadow: -2px 2px 5px var(--gray-surface-color);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .btn_2 {
@@ -61,8 +91,8 @@
   font-size: 12px;
   color: var(--white-on-surface-color);
   margin: 0px 5px;
-  width: 120px;
-  height: 25px;
+  width: 10rem;
+  height: 2.2rem;
 }
 
 .section {
