@@ -22,15 +22,15 @@ export default function Home() {
         <div className={`${styles.box}`}>
           <div className={`${styles.parallelogram}`}></div>
           <h1 className={styles.header1}>
-            Carreras simuladas, <br /> 
+            Carreras simuladas, <br />
             victorias de verdad.
           </h1>
           <h6 className={styles.header2}>
-            Vive la experiencia <br /> 
+            Vive la experiencia <br />
             detrás del volante.
           </h6>
-          <button className={styles.btn_1}>Button</button>
-          <button className={styles.btn_2}>Button</button>
+          <a href="#services"><button className={styles.btn_1}>Precios</button></a>
+          <a className={styles.nav_link} href="#footer"><button className={styles.btn_2}>Reservar</button></a>
         </div>
         <div id="promotions">
           <Promotions />
@@ -52,7 +52,9 @@ export default function Home() {
           <Prices />
         </div>
       </div>
-      <Footer />
+      <div id="footer">
+        <Footer />
+      </div>
     </>
   );
 }
