@@ -2,15 +2,19 @@ import { useRef, useEffect } from "react";
 import styles from "./promotions.module.css";
 import Image from "next/image";
 
+const promociones = [
+  "/promociones/promocion_1.jpg",
+  "/promociones/promocion_2.jpg",
+  "/promociones/promocion_3.jpg",
+  "/promociones/promocion_4.jpg",
+  "/promociones/promocion_5.jpg"
+]
+
 export default function Promotions({}) {
   const scrollRef = useRef();
   const leftRef = useRef();
   const rightRef = useRef();
-  const promotions = [];
-
-  for (let i = 0; i < 10; i++) {
-    promotions.push("/prom.png");
-  }
+  const promotions = promociones
 
   useEffect(() => {
     const left = leftRef.current;
