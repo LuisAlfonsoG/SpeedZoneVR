@@ -14,3 +14,12 @@
   font-size: 30px;
   color: var(--gray-on-surface-color);
 }
+
+.social_links{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+  color: var(--gray-on-surface-color);
+}
+
