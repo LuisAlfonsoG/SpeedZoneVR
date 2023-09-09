@@ -2,19 +2,31 @@ import styles from "./prices.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Prices({}) {
+export default function Prices({ }) {
   const sm = {
     title: "Simulador de Carreras",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    prices: [100, 100, 100, 100],
+    prices: [
+      { price: 60, description: 'Sesión 10 min.' },
+      { price: 80, description: 'Sesión 15 min.' },
+      { price: 120, description: 'Sesión 30 min.' },
+      { price: 200, description: 'Sesión 1 hr.' },
+      { price: 350, description: 'Sesión 2 hr.' },
+    ],
     img: "/sm.png",
   };
   const rv = {
     title: "Realidad Virtual",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    prices: [100, 100, 100, 100],
+    prices: [
+      { price: 35, description: 'Sesión 5 min.' },
+      { price: 60, description: 'Sesión 10 min.' },
+      { price: 80, description: 'Sesión 15 min.' },
+      { price: 120, description: 'Sesión 30 min.' },
+      { price: 200, description: 'Sesión 1 hr.' },
+    ],
     img: "/vr.png",
   };
 
@@ -40,21 +52,20 @@ export default function Prices({}) {
   );
 }
 
-function Price({ title, description, prices, img, link }) {
+function Price({ title, prices, img, link }) {
   return (
     <>
       <div className={styles.container}>
         <div className={styles.box}>
           <h1 className={styles.header}>{title}</h1>
-          <p className={styles.description}>{description}</p>
           <div>
             {prices.map((price, index) => {
               return (
                 <>
                   <div className={styles.price_box}>
-                    <span className={styles.price}>{"$" + price}</span>
+                    <span className={styles.price}>{"$" + price.price}</span>
                     <span className={styles.session}>
-                      {"Sesión " + (index + 1) + "hr" + (index > 0 ? "s" : "")}
+                      {price.description}
                     </span>
                   </div>
                 </>

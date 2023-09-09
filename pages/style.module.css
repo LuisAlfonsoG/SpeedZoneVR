@@ -95,6 +95,12 @@
   height: 2.2rem;
 }
 
+.nav_link{
+  text-decoration: none;
+  z-index: 100;
+  position: relative;
+}
+
 .section {
   display: block;
   border-style: solid;
