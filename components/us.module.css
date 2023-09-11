@@ -106,3 +106,9 @@ p.text {
     transform: rotate(0);
   }
 }
+
+@media (max-width: 576px) {
+  .mobile{
+    padding: 10px;
+  }
+}

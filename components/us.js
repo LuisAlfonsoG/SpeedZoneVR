@@ -70,15 +70,6 @@ export default function Us({ }) {
                 Además de experiencias individuales, ofrecemos la oportunidad de organizar cumpleaños, eventos empresariales y mucho más en nuestras instalaciones.
               </p>
             </> : ''}
-
-          {/* <div className="float-end">
-            <Link href={"#"} className={`${styles.text_link}`}>
-              <span className={`${styles.icon_bg}`}>
-                <ImArrowUpRight2 />
-              </span>
-              Button
-            </Link>
-          </div> */}
         </div>
       </div>
     </>
