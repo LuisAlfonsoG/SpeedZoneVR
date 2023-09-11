@@ -29,3 +29,33 @@
   }
 }
 
+.responsive_navbar{
+  position: fixed;
+  z-index: 1031;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  animation: slide-in 0.2s ease-in-out forwards;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  } to {
+    transform: translateX(0);
+  }
+}
+
+.hide_navbar_btn_container{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 1rem;
+  margin-top: 1rem;
+}
+
+.navlinks_container{
+  margin: 1rem;
+}
