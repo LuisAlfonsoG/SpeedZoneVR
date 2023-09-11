@@ -45,10 +45,10 @@ export default function Footer({ }) {
               </a>
             </div>
             <div className={`d-flex mt-2`}>
-                <span className={`me-2`}>
-                  <i className={`${styles.icon} bi bi-tiktok`}></i>
-                </span>
-                <div className={`align-self-center`}>Speed Zone</div>
+              <span className={`me-2`}>
+                <i className={`${styles.icon} bi bi-tiktok`}></i>
+              </span>
+              <div className={`align-self-center`}>Speed Zone</div>
             </div>
             <div className={`d-flex mt-2`}>
               <span className={`me-2`}>
