@@ -4,20 +4,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export default function Navbar({ }) {
-  const [windowSize, setWindowSize] = useState(0);
-
-  useEffect(() => {
-    const handleWindowResize = () => {
-      setWindowSize([window.innerWidth, window.innerHeight]);
-    };
-
-    window.addEventListener("resize", handleWindowResize);
-
-    return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
-  }, []);
-
+  
   return (
     <>
       <div className={styles.desktop}>
@@ -98,13 +85,13 @@ function Mobile({ }) {
           <Link class="nav-link mb-2" href="/">
             Inicio
           </Link>
-          <Link class="nav-link mb-2" href="/#us" scroll={false}>
+          <Link class="nav-link mb-2" href="/#us" >
             Nosotros
           </Link>
-          <Link class="nav-link mb-2" href="/#services" scroll={false}>
+          <Link class="nav-link mb-2" href="/#services" >
             Servicios
           </Link>
-          <Link class="nav-link" href="/#promotions" scroll={false}>
+          <Link class="nav-link" href="/#promotions" >
             Promociones
           </Link>
         </div>
