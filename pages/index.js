@@ -12,13 +12,15 @@ export default function Home() {
     <>
       <Navbar />
       <div className={`${styles.apply_variable}`}>
-        <Image
-          src="/background.jpg"
-          className={`${styles.bg_image}`}
-          layout="fill"
-          objectFit="cover"
-          alt={`Image`}
-        ></Image>
+        <div className={styles.bg_image_container}>
+          <Image
+            src="/background.jpg"
+            className={`${styles.bg_image}`}
+            layout="fill"
+            objectFit="cover"
+            alt={`Image`}
+          ></Image>
+        </div>
         <div className={`${styles.box}`}>
           <div className={`${styles.parallelogram}`}></div>
           <h1 className={styles.header1}>
