@@ -28,22 +28,27 @@ export default function Footer({ }) {
               </a>
             </div>
             <div className={`d-flex mt-2`}>
-              <span className={`me-2`}>
-                <i className={`${styles.icon} bi bi-facebook`}></i>
-              </span>
-              <div className={`align-self-center`}>SpeedZone VR</div>
+              <a className={styles.social_links} href="https://www.facebook.com/SpeedZoneVR">
+                <span className={`me-2`}>
+                  <i className={`${styles.icon} bi bi-facebook`}></i>
+                </span>
+
+                <div className={`align-self-center`}>SpeedZone VR</div>
+              </a>
             </div>
             <div className={`d-flex mt-2`}>
-              <span className={`me-2`}>
-                <i className={`${styles.icon} bi bi-instagram`}></i>
-              </span>
-              <div className={`align-self-center`}>speedzonevr</div>
+              <a className={styles.social_links} href="https://www.instagram.com/speedzonevr/">
+                <span className={`me-2`}>
+                  <i className={`${styles.icon} bi bi-instagram`}></i>
+                </span>
+                <div className={`align-self-center`}>speedzonevr</div>
+              </a>
             </div>
             <div className={`d-flex mt-2`}>
-              <span className={`me-2`}>
-                <i className={`${styles.icon} bi bi-tiktok`}></i>
-              </span>
-              <div className={`align-self-center`}>Speed Zone</div>
+                <span className={`me-2`}>
+                  <i className={`${styles.icon} bi bi-tiktok`}></i>
+                </span>
+                <div className={`align-self-center`}>Speed Zone</div>
             </div>
             <div className={`d-flex mt-2`}>
               <span className={`me-2`}>
