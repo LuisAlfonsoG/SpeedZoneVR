@@ -14,7 +14,7 @@ export default function Gallery({}) {
               objectFit="cover"
               alt="Image"
             ></Image>
-            <h6 className={styles.title}>Title 1</h6>
+            {/* <h6 className={styles.title}>Title 1</h6> */}
           </div>
           <div className={styles.img_container} style={{ height: "50%" }}>
             <Image
@@ -24,7 +24,7 @@ export default function Gallery({}) {
               objectFit="cover"
               alt="Image"
             ></Image>
-            <h6 className={styles.title}>Title 1</h6>
+            {/* <h6 className={styles.title}>Title 1</h6> */}
           </div>
         </div>
         <div className={styles.col} style={{ width: "35%" }}>
@@ -36,7 +36,7 @@ export default function Gallery({}) {
               objectFit="cover"
               alt="Image"
             ></Image>
-            <h6 className={styles.title}>Title 1</h6>
+            {/* <h6 className={styles.title}>Title 1</h6> */}
           </div>
           <div className={styles.img_container} style={{ height: "30%" }}>
             <Image
@@ -46,7 +46,7 @@ export default function Gallery({}) {
               objectFit="cover"
               alt="Image"
             ></Image>
-            <h6 className={styles.title}>Title 1</h6>
+            {/* <h6 className={styles.title}>Title 1</h6> */}
           </div>
         </div>
         <div className={styles.col} style={{ width: "25%" }}>
@@ -58,7 +58,7 @@ export default function Gallery({}) {
               objectFit="cover"
               alt="Image"
             ></Image>
-            <h6 className={styles.title}>Title 1</h6>
+            {/* <h6 className={styles.title}>Title 1</h6> */}
           </div>
           <div className={styles.img_container} style={{ height: "50%" }}>
             <Image
@@ -68,7 +68,7 @@ export default function Gallery({}) {
               objectFit="cover"
               alt="Image"
             ></Image>
-            <h6 className={styles.title}>Title 1</h6>
+            {/* <h6 className={styles.title}>Title 1</h6> */}
           </div>
         </div>
       </div>
