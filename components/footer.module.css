@@ -23,3 +23,7 @@
   color: var(--gray-on-surface-color);
 }
 
+.politica_link{
+  color: var(--gray-on-surface-color);
+  text-decoration: none;
+}

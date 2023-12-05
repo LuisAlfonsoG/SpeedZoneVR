@@ -23,17 +23,17 @@ function Desktop({ }) {
       <nav
         className={`${styles.apply_variable} navbar nav-justified navbar-expand-lg fixed-top navbar-dark`}
       >
-        <div class="container">
-          <ul class="navbar-nav">
-            <div class="nav-item">
-              <Link class="nav-link" href="/">
+        <div className="container">
+          <ul className="navbar-nav">
+            <div className="nav-item">
+              <Link className="nav-link" href="/">
                 Inicio
               </Link>
             </div>
           </ul>
-          <ul class="navbar-nav">
-            <div class="nav-item">
-              <Link class="nav-link" href="/#us" scroll={false}>
+          <ul className="navbar-nav">
+            <div className="nav-item">
+              <Link className="nav-link" href="/#us" scroll={false}>
                 Nosotros
               </Link>
             </div>
@@ -45,16 +45,16 @@ function Desktop({ }) {
             height={50}
             alt="Logo"
           ></Image>
-          <ul class="navbar-nav">
-            <div class="nav-item">
-              <Link class="nav-link" href="/#services" scroll={false}>
+          <ul className="navbar-nav">
+            <div className="nav-item">
+              <Link className="nav-link" href="/#services" scroll={false}>
                 Servicios
               </Link>
             </div>
           </ul>
-          <ul class="navbar-nav">
-            <div class="nav-item">
-              <Link class="nav-link" href="/#promotions" scroll={false}>
+          <ul className="navbar-nav">
+            <div className="nav-item">
+              <Link className="nav-link" href="/#promotions" scroll={false}>
                 Promociones
               </Link>
             </div>
