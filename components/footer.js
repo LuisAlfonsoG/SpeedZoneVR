@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./footer.module.css";
 
 export default function Footer({ }) {
@@ -56,6 +57,12 @@ export default function Footer({ }) {
               </span>
               <div className={`align-self-center`}>speedzonevr@gmail.com</div>
             </div>
+            <div className="d-flex mt-2">
+            <span className={`me-2`}>
+                <i className={`${styles.icon} bi bi-shield-exclamation`}></i>
+              </span>
+              <Link className={`${styles.politica_link} align-self-center`} href={'/legal/politica-de-privacidad'}>Política de Privacidad</Link>
+            </div>
           </div>
           <div className={`col justify-content-center mt-3 me-2`}>
             <div className={`d-flex justify-content-center`}>
@@ -71,6 +78,7 @@ export default function Footer({ }) {
             </div>
           </div>
         </div>
+
       </div>
     </>
   );
